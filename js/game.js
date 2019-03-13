@@ -2,15 +2,15 @@
 
 var game = {
     music: "98_Lost_Mine.mp3",
-    background_image: "intro-bg.jpg",
+    background_image: "https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/5PNlDRM/subway-train-moving-in-the-dark-tunnel-and-arriving-at-the-station-paris-france_spvwnedi__F0000.png",
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You come across a subway station",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Enter the subway",
+                    nextLevel: "Subway",
                 },
 
                 {
@@ -20,20 +20,62 @@ var game = {
             ]
         },
 
-        cave: {
+        Subway: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "You have entered the subway and a ghost train arrives",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Board Train",
+                    nextLevel: "Wakanda",
+                },{
+                    text: "Do not Board Train",
+                    nextLevel:"Myers"
+                }
+            ]
+        },
+        Myers: {
+            message:"Michael Myers Kills You",
+            choices: [
+                {
+                    text:"Start Over",
+                    nextLevel:"start",
+                }
+                ]
+        },
+        Wakanda:{
+            message:"You are now in Wakanda",
+            choices: [
+                {
+                    text:"Bring Killmonger back",
+                    nextLevel:"Killmonger",
+                },
+                {
+                    text:"Kill T'challa",
+                    nextLevel:"Tchalla"
+                }
+            ]
+        },
+        Killmonger:{
+            message:"Wakanda has been destroyed",
+            choices: [
+                {
+                    text:"Start Over",
+                    nextLevel:"start",
                 },
             ]
         },
-
+        Tchalla:{
+            message:"Now you're dead I don't know why you tried that",
+            choices: [
+                {
+                    text:"Start Over",
+                    nextLevel:"start",
+                },
+            ]
+        },
         field: {
-            message: "Some adventurer you are...",
+            message: "Such a scaredy cat",
             choices: [
                 {
                     text: "Start over",
